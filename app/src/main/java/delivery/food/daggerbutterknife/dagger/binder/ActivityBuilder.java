@@ -8,6 +8,6 @@ import delivery.food.daggerbutterknife.dagger.module.AppModule;
 @Module
 public abstract class ActivityBuilder {
 
-    @ContributesAndroidInjector(modules = AppModule.class)
+    @ContributesAndroidInjector
     abstract MainActivity bindMainActivity();
 }
