@@ -11,6 +11,7 @@ import javax.inject.Inject;
 import dagger.android.AndroidInjection;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
+
     @Inject
     Intent intentData;
 

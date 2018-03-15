@@ -6,11 +6,13 @@ import android.app.Application;
 import dagger.BindsInstance;
 import dagger.Component;
 import delivery.food.daggerbutterknife.app.App;
+import delivery.food.daggerbutterknife.dagger.binder.ActivityBuilder;
 import delivery.food.daggerbutterknife.dagger.component.AppComponent;
 import delivery.food.daggerbutterknife.dagger.module.activity.MainModule;
 import delivery.food.daggerbutterknife.dagger.scope.UserScope;
+/*
 
-@Component(dependencies = AppComponent.class, modules = {MainModule.class})
+@Component(dependencies = AppComponent.class, modules = {ActivityBuilder.class})
 @UserScope
 public interface UserComponent {
 
@@ -24,3 +26,4 @@ public interface UserComponent {
 
     void inject(App app);
 }
+*/
