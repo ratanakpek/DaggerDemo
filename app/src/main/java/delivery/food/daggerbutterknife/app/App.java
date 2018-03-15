@@ -7,7 +7,9 @@ import javax.inject.Inject;
 
 import dagger.android.DispatchingAndroidInjector;
 import dagger.android.HasActivityInjector;
+import delivery.food.daggerbutterknife.dagger.component.AppComponent;
 import delivery.food.daggerbutterknife.dagger.component.DaggerAppComponent;
+import delivery.food.daggerbutterknife.dagger.component.subcomponent.DaggerUserComponent;
 
 public class App extends Application implements HasActivityInjector {
 
@@ -18,11 +20,15 @@ public class App extends Application implements HasActivityInjector {
     public void onCreate() {
         super.onCreate();
 
-        DaggerAppComponent
+        AppComponent appComponent=DaggerAppComponent
                 .builder()
                 .application(this)
-                .build()
-                .inject(this);
+                .build();
+        appComponent.inject(this);
+
+        DaggerUserComponent
+                .builder()
+                .appComponent(appComponent).build().inject(this);
 
     }
 
