@@ -1,4 +1,4 @@
-package delivery.food.daggerbutterknife.ui.adapter;
+package delivery.food.daggerbutterknife.ui.rx.adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;

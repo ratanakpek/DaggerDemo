@@ -1,4 +1,4 @@
-package delivery.food.daggerbutterknife.ui.item;
+package delivery.food.daggerbutterknife.ui.rx.item;
 
 public class HelloItem {
     private String name;

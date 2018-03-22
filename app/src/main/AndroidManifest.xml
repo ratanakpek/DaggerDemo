@@ -2,6 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="delivery.food.daggerbutterknife">
 
+    <!--
+    Note that all required permissions are declared here in the Android manifest.
+    On Android M and above, use of these permissions is only requested at run time.
+    -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!--
+     The following permissions are only requested if the device is on M or above.
+     On older platforms these permissions are not requested and will not be available.
+    -->
+    <uses-permission-sdk-23 android:name="android.permission.READ_CONTACTS" />
+    <uses-permission-sdk-23 android:name="android.permission.WRITE_CONTACTS" />
+
     <application
         android:name=".app.App"
         android:allowBackup="true"
@@ -10,16 +23,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-        </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".EventBusActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".LogoutActivity" />
-        <activity android:name=".PaginationActivity"></activity>
-        <activity android:name=".SpruceActivity"></activity>
+        <activity android:name=".PaginationActivity" />
+        <activity android:name=".SpruceActivity" />
         <activity android:name=".ui.rx.RxActivity">
+        </activity>
+        <activity android:name=".ui.permission.PermissionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
